@@ -1,4 +1,11 @@
 :root{
+    --banner-home: url("images/banners/home.png");
+    --banner-events: url("images/banners/events.png");
+    --banner-gallery: url("images/banners/gallery.png");
+    --banner-faq: url("images/banners/faq.png");
+    --banner-contact: url("images/banners/contact.png");
+
+
     --bg-gray:#363638;
     --bg-grid-gray: #3f3f3f;
     --bg-purple: #a55dff;
@@ -44,6 +51,10 @@ ol, ul{
     list-style-type: none;
 }
 
+html{
+    font-size: 10px;
+}
+
 body{
     background-color: var(--bg-gray);
     background-size: 30px 30px;
@@ -51,7 +62,6 @@ body{
         linear-gradient(to right, var(--bg-grid-gray) 2px, transparent 2px),
         linear-gradient(to bottom, var(--bg-grid-gray) 2px, transparent 2px);
     color: var(--text-main);
-    font-size: 10px;
     margin: 2.5% 15% 2.5% 15%;
     font-family: var(--font-text);
 }
@@ -59,13 +69,13 @@ body{
 h1{
     font-family: var(--font-heading);
     color: var(--text-purple);
-    font-size: 4em;
+    font-size: 4rem;
 }
 
 h2{
     font-family: var(--font-subheading);
     color: var(--text-pink);
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 p{
@@ -104,7 +114,7 @@ body > header img{
 
 .site-links li{
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     flex: 1;
 }
 
@@ -113,7 +123,7 @@ body > header img{
     color: var(--text-purple);
     font-family: var(--font-heading);
     text-decoration: none;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.5rem;
 }
 
 .site-links a:before, .current:after{
@@ -147,12 +157,25 @@ body > header img{
     height: 25vw;
     border: 3px solid white;
     margin: 5% 0 5% 0;
-    position: relative;
+    padding: 3rem 35% 3rem 5rem;
+    background-size: cover;
+    background-position: center;
 }
 
-.banner img{
-    width: 100%;
-    height: 100%;
+#home .banner{
+    background-image: var(--banner-home);
+}
+#events .banner{
+    background-image: var(--banner-events);
+}
+#gallery .banner{
+    background-image: var(--banner-gallery);
+}
+#faq .banner{
+    background-image: var(--banner-faq);
+}
+#contact .banner{
+    background-image: var(--banner-contact);
 }
 
 
@@ -166,16 +189,16 @@ body > footer{
     background-color: var(--bg-pink);
     border-radius: 10px;
     margin-top: 5%;
-    padding: 2.5em 0 5em 5em;
+    padding: 2.5rem 0 5rem 5rem;
 }
 
 body > footer span{
-    font-size: 0.5em;
+    font-size: 2.5rem;
     font-family: var(--font-text);
 }
 
 body > footer p{
-    font-size: 5em;
+    font-size: 5rem;
     font-family: var(--font-heading);
 }
 
@@ -201,7 +224,7 @@ body > footer p{
 
 
 #home h1, #home h2{
-    font-size: 4em;
+    font-size: 4rem;
     font-family: var(--font-heading);
     color: var(--text-purple);
 }
@@ -211,16 +234,8 @@ body > footer p{
 }
 
 
-.banner div{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 2.5em 0 0 5em;
-    width: 60%;
-}
-
 .banner p{
-    font-size: 3.5vw;
+    font-size: 4vw;
     font-family: var(--font-heading);
     text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
     -webkit-text-stroke: 2px rgba(0, 0, 0, 0.8);
@@ -232,10 +247,10 @@ body > footer p{
     text-decoration: none;
     background-color: var(--bg-purple);
     border-radius: 10px;
-    margin-top: 1em;
-    padding: 1em;
-    font-size: 1.5vw;
-    width: 50%;
+    margin-top: 1rem;
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 2vw;
+    width: 20vw;
 }
 
 .banner a:after{
@@ -265,7 +280,7 @@ body > footer p{
 }
 
 #about-left > article{
-    padding-right: 6em;
+    padding-right: 6rem;
 }
 
 #about-left p:not(:last-of-type){
@@ -303,11 +318,11 @@ body > footer p{
 }
 
 #social-dance h3{
-    font-size: 2em;
+    font-size: 2rem;
     font-family: var(--font-text);
     font-weight: normal;
     color: var(--text-pink);
-    padding-top: 0.5em;
+    padding-top: 0.5rem;
 }
 
 #social-dance > img{
@@ -331,9 +346,57 @@ body > footer p{
 }
 
 #social{
-    padding-right: 2em;
+    padding-right: 2rem;
 }
 
 #dance{
-    padding-left: 2em;
+    padding-left: 2rem;
+}
+
+
+
+
+
+
+
+#gallery-grid{
+    margin: 5% 0 5% 0;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: stretch;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#faq > main > section > header{
+    margin-bottom: 4rem;
+}
+
+#faq > main > section > header p{
+    font-size: 4rem;
+    font-family: var(--font-heading)
+}
+
+.question{
+    padding: 1.5rem 0 1.5rem 0;
+}
+
+.question > h2{
+    font-family: var(--font-subheading);
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
+.question > p, .question > ul{
+    font-family: var(--font-text);
+    font-size: 1.75rem;
+    font-weight: normal;
 }
